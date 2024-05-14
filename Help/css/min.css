@@ -1,0 +1,191 @@
+/* global rules in eny project */
+* {
+ box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;   
+}
+body {
+    font-family: "Work Sans", sans-serif;
+
+}
+.contenar {
+    width: 600px;
+   margin-left: auto;
+   margin-right:auto ;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* small screen */
+@media (min-width:768px) {
+    .contenar{
+        width: 750px;
+    }
+}
+/* medium screen */
+@media (min-width:992px) {
+    .contenar{
+        width: 970px;
+    }
+}
+/* large screen */
+@media (min-width:1200px) {
+    .contenar{
+        width: 1170px;
+    }
+}
+/* start header */
+.header {
+    padding: 20px;
+}
+.header .contenar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenar .logo img{
+    width: 60px;
+}
+.header .links {
+    position: relative;
+}
+.header .links:hover .icon span:nth-child(2){
+    width: 80%;
+    height: 3px;
+}
+.header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icon span{
+    background-color: #333;
+margin-bottom: 5px;
+border-radius: 10px;
+}
+.header .links .icon span:first-child{
+height: 3px;
+width: 80%;
+border-radius: 10px;
+}
+.header .links .icon span:nth-child(2){
+    height: 2px;
+    width: 60%;
+    transition: 0.3s;
+}
+.header .links .icon span:last-child{
+    height: 3px;
+    width: 90%;
+    border-radius: 20px;
+}
+.header .links ul{
+margin: 0%;
+padding: 0%;
+position: absolute;
+right: 0;
+top: calc(100% + 15px);
+background-color:#eee;
+min-width: 200px;
+display: none;
+
+}
+.header .links ul::before{
+    content: '';
+border-width: 10px;
+border-style: solid;
+border-color:  transparent transparent #eee transparent;
+position: absolute;
+right: 5px;
+top: -20px;
+}
+.header .links:hover ul {
+    display: block;
+
+}
+.header .links ul li a{
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+    display: block;
+    transition: 0.3s;
+    
+}
+.header .links ul li a:hover {
+    padding-left: 25px;
+    /* transform: scale(1.1); */
+}
+.header .links ul li{
+    list-style: none;
+}
+.header .links ul li:not(:last-child) a{
+    border-bottom: 1px solid #ddd   ;
+}
+/* end header */
+.landing {
+    background-image: linear-gradient(to bottom ,rgba(255, 255, 255, 0.74) 30%,transparent) ,
+    url(/Help/images/chris-herath-FcvIlm3I2Ts-unsplash.jpg);
+    height: calc(100vh - 68px);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+.contenar .intro-text { 
+
+}
+.landing .intro-text h1{
+margin: 0%;
+text-align: center;
+font-size: 50px;
+font-weight: bold;
+color:rgb(3, 177, 177);
+}
+.landing .intro-text p{
+flex-wrap: wrap;
+max-width: 350px;
+text-align: center;
+margin-top: 40px;
+line-height: 30px;
+
+}
+/* end landing */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* start landing */
+/* .landing {
+    display: flex;
+    justify-content: center;
+    color:rgb(3, 177, 177);
+    text-transform:capitalize;
+    background-image: linear-gradient(to bottom ,rgba(255, 255, 255, 0.74) 30%,transparent) ,
+    url(/Help/images/chris-herath-FcvIlm3I2Ts-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 64px);
+}
+.landing .intro-text h1{
+    text-align: center;
+    margin: 0%;
+    font-weight: bold;
+    font-size: 50px;
+}
+.landing .intro-text p{
+    flex-wrap: wrap;
+    width: 350px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 40px;
+} */
